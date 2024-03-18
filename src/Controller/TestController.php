@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
-    #[Route('/test')]
+    #[Route('/test', methods: ['GET'])]
     public function index(Request $request): Response
     {
         return new Response(
