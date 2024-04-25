@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Series{% endblock %}
+
+{% block body %}
+  <h1>New Series</h1>
+
+  <form method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <button>Create</button>
+  </form>
+{% endblock %}

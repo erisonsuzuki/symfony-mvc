@@ -18,4 +18,11 @@ class SeriesController extends AbstractController
             'seriesList' => $seriesList,
         ]);
     }
+
+    #[Route('/series/new', methods: ['GET'])]
+    public function create(): Response
+    {
+        return $this->render('series/form.html.twig', [
+        ]);
+    }
 }
