@@ -9,20 +9,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class SeriesController extends AbstractController
 {
     #[Route('/series', name: 'app_series', methods: ['GET'])]
-    public function index(): Response
+    public function seriesList(): Response
     {
-        $seriesList = ['Lost', 'Grey\'s Anatomy', 'Loki',];
-
+        $seriesList = [
+            'Lost',
+            'Grey\'s Anatomy',
+            'Loki',
+            'Suits',
+        ];
 
         return $this->render('series/index.html.twig', [
             'seriesList' => $seriesList,
         ]);
     }
 
-    #[Route('/series/new', methods: ['GET'])]
-    public function create(): Response
+    #[Route('/series/create', methods: ['GET'])]
+    public function addSeriesForm(): Response
     {
-        return $this->render('series/form.html.twig', [
-        ]);
+        return $this->render('series/form.html.twig');
     }
 }
